@@ -18,14 +18,14 @@ export default function TodoList() {
 
 
     const removeTask = id => {
-        let updatedTasks = [...todos].filter(task => task.id != id)
+        let updatedTasks = [...todos].filter(task => task.id !== id)
         setTodos(updatedTasks)
     }
 
 
     const completeTask = id => {
         let updatedTasks = todos.map(todo => {
-            if (todo.id == id) {
+            if (todo.id === id) {
                 todo.isComplete = true;
             }
             return todo;
